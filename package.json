@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Forjd package set for the pi coding agent with a Git diff sidebar, subagents, todo tracking, and structured questions.",
   "type": "module",
+  "packageManager": "bun@1.3.14",
   "author": "Forjd",
   "homepage": "https://github.com/forjd/forjd-pi#readme",
   "repository": {

@@ -8,11 +8,11 @@ Guidance for AI coding agents working in this repository.
 
 ## Development commands
 
-- Install dependencies: `npm install`
-- Type-check the project: `npm run typecheck`
+- Install dependencies: `bun install`
+- Type-check the project: `bun run typecheck`
 - Test the extension in a local pi session: `pi -e ./extensions/git-diff-sidebar.ts`
 
-Run `npm run typecheck` before considering code changes complete.
+Run `bun run typecheck` before considering code changes complete.
 
 ## Repository conventions
 
