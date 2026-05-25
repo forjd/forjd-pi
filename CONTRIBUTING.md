@@ -26,6 +26,7 @@ pi -e ./extensions/git-diff-sidebar.ts
 - Keep extensions small and focused.
 - Prefer passive UI that does not interrupt the main editor unless a command explicitly asks for interaction.
 - Run `npm run typecheck` before opening a PR.
+- GitHub Actions runs `npm ci`, `npm run typecheck`, and `npm pack --dry-run` on pushes and pull requests targeting `main`.
 - Update the README when adding commands, configuration, package contents, or visible UI changes.
 
 ## Security
