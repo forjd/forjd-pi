@@ -1,7 +1,7 @@
 {
   "name": "forjd-pi",
   "version": "0.1.0",
-  "description": "Forjd extension pack for the pi coding agent, starting with a high-level Git diff sidebar.",
+  "description": "Forjd package set for the pi coding agent with a Git diff sidebar, subagents, todo tracking, and structured questions.",
   "type": "module",
   "author": "Forjd",
   "homepage": "https://github.com/forjd/forjd-pi#readme",
@@ -15,11 +15,14 @@
   "keywords": [
     "pi-package",
     "pi-extension",
-    "pi-coding-agent"
+    "pi-coding-agent",
+    "subagents",
+    "todo"
   ],
   "license": "MIT",
   "files": [
     "extensions",
+    "packages",
     "README.md",
     "LICENSE",
     "CONTRIBUTING.md"
@@ -29,17 +32,37 @@
   },
   "pi": {
     "extensions": [
-      "./extensions"
+      "./extensions",
+      "./packages/pi-subagents/src/extension/index.ts",
+      "./packages/rpiv-todo/index.ts",
+      "./packages/rpiv-ask-user-question/index.ts"
+    ],
+    "skills": [
+      "./packages/pi-subagents/skills"
+    ],
+    "prompts": [
+      "./packages/pi-subagents/prompts"
     ]
   },
+  "dependencies": {
+    "@juicesharp/rpiv-config": "^1.12.0",
+    "@juicesharp/rpiv-i18n": "^1.12.0",
+    "jiti": "^2.7.0"
+  },
   "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
     "@earendil-works/pi-coding-agent": "*",
-    "@earendil-works/pi-tui": "*"
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
   },
   "devDependencies": {
-    "@earendil-works/pi-coding-agent": "latest",
-    "@earendil-works/pi-tui": "latest",
+    "@earendil-works/pi-agent-core": "^0.74.0",
+    "@earendil-works/pi-ai": "^0.74.0",
+    "@earendil-works/pi-coding-agent": "^0.74.0",
+    "@earendil-works/pi-tui": "^0.74.0",
     "@types/node": "^22.15.29",
+    "typebox": "^1.1.24",
     "typescript": "^5.8.3"
   }
 }
