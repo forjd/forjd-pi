@@ -9,7 +9,13 @@ npm install
 npm run typecheck
 ```
 
-To test the extension in pi without installing it globally:
+To test the package set in pi without installing it globally:
+
+```bash
+pi -e /path/to/forjd-pi
+```
+
+To test only the Git diff sidebar extension:
 
 ```bash
 pi -e ./extensions/git-diff-sidebar.ts
@@ -20,7 +26,7 @@ pi -e ./extensions/git-diff-sidebar.ts
 - Keep extensions small and focused.
 - Prefer passive UI that does not interrupt the main editor unless a command explicitly asks for interaction.
 - Run `npm run typecheck` before opening a PR.
-- Update the README when adding commands, configuration, or visible UI changes.
+- Update the README when adding commands, configuration, package contents, or visible UI changes.
 
 ## Security
 
