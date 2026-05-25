@@ -33,7 +33,7 @@ This package bundles the Forjd Git diff sidebar plus three cloned pi packages:
 │ 7 new                              │
 │ +2857 -0  7 files • just now       │
 ├────────────────────────────────────┤
-│ ? package-lock.json       +2016 -0 │
+│ ? bun.lock                +2016 -0 │
 │ ? extensions/git-diff...   +732 -0 │
 │ ? README.md                 +51 -0 │
 │ ? package.json              +34 -0 │
@@ -97,13 +97,15 @@ The pi manifest is declared in `package.json` and loads extension, skill, and pr
 
 ## Development
 
+This repository uses Bun for local development and CI. Pi still loads extensions with a Node-compatible runtime, so extension code should keep using Node-compatible APIs and avoid Bun-only runtime globals.
+
 ```bash
-npm install
-npm run typecheck
-npm pack --dry-run
+bun install
+bun run typecheck
+bun pm pack --dry-run
 ```
 
-GitHub Actions runs `npm ci`, `npm run typecheck`, and `npm pack --dry-run` on pushes and pull requests targeting `main`. The workflow can also be run manually from the Actions tab.
+GitHub Actions runs `bun install --frozen-lockfile`, `bun run typecheck`, and `bun pm pack --dry-run` on pushes and pull requests targeting `main`. The workflow can also be run manually from the Actions tab.
 
 ## Roadmap
 
