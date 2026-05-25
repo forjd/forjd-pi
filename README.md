@@ -1,5 +1,7 @@
 # forjd-pi
 
+[![CI](https://github.com/forjd/forjd-pi/actions/workflows/ci.yml/badge.svg)](https://github.com/forjd/forjd-pi/actions/workflows/ci.yml)
+
 A [pi coding agent](https://pi.dev) package set from Forjd.
 
 This package bundles the Forjd Git diff sidebar plus three cloned pi packages:
@@ -100,6 +102,8 @@ npm install
 npm run typecheck
 npm pack --dry-run
 ```
+
+GitHub Actions runs `npm ci`, `npm run typecheck`, and `npm pack --dry-run` on pushes and pull requests targeting `main`. The workflow can also be run manually from the Actions tab.
 
 ## Roadmap
 
